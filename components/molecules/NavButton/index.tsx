@@ -3,11 +3,13 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-interface INavButtonProps {}
+interface INavButtonProps {
+  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
+}
 
 const ButtonStyle = styled.button`
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   background: #666;
   color: #fff;
   padding: 0;
@@ -21,7 +23,7 @@ const ButtonStyle = styled.button`
   cursor: pointer;
 
   svg {
-    height: 38px;
+    width: 35%;
   }
 
   &:hover {
@@ -33,13 +35,13 @@ const ButtonStyle = styled.button`
 export const NavLabel = styled.p`
   padding: 0;
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 80%;
   display: block;
   line-height: 80%;
 `;
 
-export const NavButton: React.FC<INavButtonProps> = () => (
-  <ButtonStyle>
+export const NavButton: React.FC<INavButtonProps> = ({ onClick }) => (
+  <ButtonStyle onClick={onClick}>
     <div>
       <FontAwesomeIcon icon={faBars} />
       <NavLabel>Menu</NavLabel>
