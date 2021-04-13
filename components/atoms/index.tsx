@@ -1,1 +1,2 @@
-export const atoms = "";
+export * from "./GlobalStyles";
+export * from "./Heading";
