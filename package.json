@@ -8,6 +8,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "next": "latest",
     "polished": "^4.1.1",
     "react": "^17.0.1",

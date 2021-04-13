@@ -6,7 +6,10 @@ type ILayoutProps = {
   title?: string;
 };
 
-const Layout = ({ children, title = "Digital Menu" }: ILayoutProps) => (
+export const Layout: React.FC<ILayoutProps> = ({
+  children,
+  title = "Digital Menu",
+}) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -16,5 +19,3 @@ const Layout = ({ children, title = "Digital Menu" }: ILayoutProps) => (
     {children}
   </div>
 );
-
-export default Layout;
