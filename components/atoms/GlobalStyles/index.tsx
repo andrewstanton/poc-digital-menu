@@ -11,6 +11,7 @@ export const GlobalStyles = createGlobalStyle`
 
     *, body, html, p, h1, h2, h3, h4, a {
         font-family: 'Roboto', sans-serif;
+        user-select: none;
     }
 
     button {
